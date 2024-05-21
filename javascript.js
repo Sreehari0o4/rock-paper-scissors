@@ -10,13 +10,19 @@
 let humanScore=0;
 let computerScore=0;
 
-for(i=1;i<6;i++)
-    {
-        playGame();
-    }
+
 
 function playGame()
 {
+    let humanChoice;
+    let computerChoice;
+
+    for(i=1;i<6;i++)
+        {
+            playRound();
+        }
+
+
     function getHumanChoice()
     {
 
@@ -27,5 +33,9 @@ function playGame()
 
     }
 
-    
+    function playRound()
+    {
+        humanChoice=getHumanChoice();
+        computerChoice=getComputerChoice();
+    }
 }
