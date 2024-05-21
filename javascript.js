@@ -35,7 +35,7 @@ function playGame()
     function getComputerChoice()
     {
         let choices = ["rock","paper","scissors"];
-        let randomChoice = choices[Math.floor(Math.random()*3)];
+        let randomChoice = choices[Math.floor(Math.random()*choices.length)];
         return randomChoice;
     } //fuunction to randomly select options for the computer
 
