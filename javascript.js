@@ -19,7 +19,9 @@ function playGame()
 
     for(i=1;i<6;i++)
         {
-            playRound();
+            humanChoice=getHumanChoice();
+            computerChoice=getComputerChoice();
+            playRound(humanChoice,computerChoice);
         }
 
 
@@ -37,9 +39,8 @@ function playGame()
         return randomChoice;
     } //fuunction to randomly select options for the computer
 
-    function playRound()
+    function playRound(human_Choice,computer_Choice)
     {
-        humanChoice=getHumanChoice();
-        computerChoice=getComputerChoice();
+        
     }
 }
