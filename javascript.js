@@ -27,8 +27,13 @@ function playGame()
 
     function getHumanChoice()
     {
-        let choice = prompt("Choose Rock ,Paper or Scissors");
-        let caseInChoice = choice.toLowerCase();
+        let choice;
+        let caseInChoice;
+        do{
+        choice = prompt("Choose Rock ,Paper or Scissors");
+        caseInChoice = choice.toLowerCase();
+        }while(caseInChoice != "rock" && caseInChoice != "paper" && caseInChoice != "scissors");
+
         return caseInChoice;
     }  //function to prompt user input and is stored in humanChoice variable
 
