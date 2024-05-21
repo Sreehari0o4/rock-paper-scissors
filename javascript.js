@@ -89,4 +89,21 @@ function playGame()
                     console.log("Wrong input");
                 }
     }
+
+    console.log(`Your score: ${humanScore}`);
+    console.log(`My score: ${computerScore}`);
+
+    if(humanScore>computerScore)
+        {
+            console.log("YOU WIN.");
+        }
+    else if(humanScore<computerScore)
+        {
+            console.log("YAH, I WIN.");
+        }
+    else
+    {
+        console.log("IT'S A TIE.");
+    }
+
 }
