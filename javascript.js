@@ -27,20 +27,66 @@ function playGame()
 
     function getHumanChoice()
     {
-        let choice = prompt("Choose Rock ,Paper or Scissor");
+        let choice = prompt("Choose Rock ,Paper or Scissors");
         let caseInChoice = choice.toLowerCase();
         return caseInChoice;
     }  //function to prompt user input and is stored in humanChoice variable
 
     function getComputerChoice()
     {
-        let choices = ["rock","paper","scissor"];
+        let choices = ["rock","paper","scissors"];
         let randomChoice = choices[Math.floor(Math.random()*3)];
         return randomChoice;
     } //fuunction to randomly select options for the computer
 
     function playRound(human_Choice,computer_Choice)
     {
-        
+        if(human_Choice == computer_Choice)
+            {
+                console.log("TIE!");
+            }
+        else if(human_Choice == "rock")
+            {
+                if(computer_Choice == "paper")
+                    {
+                        console.log("You lost dumbass!! , Paper beats Rock.");
+                        computerScore++;
+                    }
+                else
+                {
+                    console.log("Damn!! you win ,Rock beats scissors");
+                    humanScore++;
+                }
+            }
+            else if(human_Choice == "paper")
+                {
+                    if(computer_Choice == "scissors")
+                        {
+                            console.log("You lost dumbass!! , Scissors beats paper.");
+                            computerScore++;
+                        }
+                    else
+                    {
+                        console.log("Damn!! you win ,Paper beats rock");
+                        humanScore++;
+                    }
+                }
+                else if(human_Choice == "scissors")
+                    {
+                        if(computer_Choice == "rock")
+                            {
+                                console.log("You lost dumbass!! , rock beats scissors.");
+                                computerScore++;
+                            }
+                        else
+                        {
+                            console.log("Damn!! you win ,scissors beats paper");
+                            humanScore++;
+                        }
+                    }
+                else
+                {
+                    console.log("Wrong input");
+                }
     }
 }
